@@ -9,9 +9,10 @@ development:
   reconnect: false
   database: task_development
   pool: 5
-  username: dotline
-  password: silvio
+  username: adminVYWfa4y
+  password: d-1sacqvRiNU
   socket: /var/run/mysqld/mysqld.sock
+  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -22,9 +23,10 @@ test:
   reconnect: false
   database: task_test
   pool: 5
-  username: dotline
-  password: silvio
+  username: adminVYWfa4y
+  password: d-1sacqvRiNU
   socket: /var/run/mysqld/mysqld.sock
+  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
 
 production:
   adapter: mysql2
@@ -32,6 +34,7 @@ production:
   reconnect: false
   database: task_production
   pool: 5
-  username: dotline
-  password: silvio
+  username: adminVYWfa4y
+  password: d-1sacqvRiNU
   socket: /var/run/mysqld/mysqld.sock
+  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
