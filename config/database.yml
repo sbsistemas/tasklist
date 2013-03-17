@@ -7,12 +7,14 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: task_development
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
-  username: adminVYWfa4y
-  password: d-1sacqvRiNU
-  socket: /var/run/mysqld/mysqld.sock
-  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+  host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>  
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,20 +23,22 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: task_test
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
-  username: adminVYWfa4y
-  password: d-1sacqvRiNU
-  socket: /var/run/mysqld/mysqld.sock
-  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+  host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>  
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: task_production
+  database: <%=ENV['OPENSHIFT_APP_NAME']%>
   pool: 5
-  username: adminVYWfa4y
-  password: d-1sacqvRiNU
-  socket: /var/run/mysqld/mysqld.sock
-  host: mysql://$OPENSHIFT_MYSQL_DB_HOST:$OPENSHIFT_MYSQL_DB_PORT/
+  host: <%=ENV['OPENSHIFT_MYSQL_DB_HOST']%>
+  port: <%=ENV['OPENSHIFT_MYSQL_DB_PORT']%>
+  username: <%=ENV['OPENSHIFT_MYSQL_DB_USERNAME']%>
+  password: <%=ENV['OPENSHIFT_MYSQL_DB_PASSWORD']%>
+  socket: <%=ENV['OPENSHIFT_MYSQL_DB_SOCKET']%>  
